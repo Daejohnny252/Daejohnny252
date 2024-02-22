@@ -27,4 +27,24 @@ Pod::Spec.new do |s|
    end
 end
 let paymentMethod = CashAppPaymentMethod(size: .small)
-paymentMethod.cashTag = "$jack"
+paymentMethod.cashTag = $thesovereignbro
+private let sandboxBrandID = "YOUR_BRAND_ID"
+
+override func viewDidLoad() {
+    super.viewDidLoad()
+    // load view hierarchy
+    sdk.createCustomerRequest(
+        params: CreateCustomerRequestParams(
+            actions: [
+                .oneTimePayment(
+                    scopeID: brandID,
+                    money: Money(amount: 500, currency: .USD)
+                )
+            ],
+            channel: .IN_APP,
+            redirectURL: URL(string: "tipmycap://callback")!,
+            referenceID: nil,
+            metadata: nil
+        )
+    )
+}

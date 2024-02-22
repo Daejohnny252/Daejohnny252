@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
 end
 let paymentMethod = CashAppPaymentMethod(size: .small)
 paymentMethod.cashTag = $thesovereignbro
-private let sandboxBrandID = "YOUR_BRAND_ID"
+private let sandboxBrandID = $thesovereignbro
 
 override func viewDidLoad() {
     super.viewDidLoad()

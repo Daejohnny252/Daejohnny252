@@ -26,3 +26,5 @@ Pod::Spec.new do |s|
        }
    end
 end
+let paymentMethod = CashAppPaymentMethod(size: .small)
+paymentMethod.cashTag = "$jack"
